@@ -21,15 +21,10 @@ let timeEnd;
 let isEndScreen;
 let isStartScreen;
 
-
 setup();
-
-
 
 document.body.addEventListener('keydown', (e) => {
     if (e.key.length != 1 && e.key !== "Backspace" || isEndScreen || isStartScreen) return;
-
-    console.log("Key: '" + e.key + "' Intended key: '" + text[index] + "' Value: "  + (e.key == text[index]));
 
     if (firstType) {
         timeStart = new Date().getTime();
@@ -64,8 +59,6 @@ function setStartScreen() {
 }
 
 function setup() {
-    console.log("Setting everything up...");
-
     isStartScreen = true;
 
     if (!(wordCountInput.value === "" || isNaN(wordCountInput.value))) {
@@ -108,8 +101,6 @@ function setup() {
             newWordIndex++;
         } 
     }
-
-    console.log(`FirstType: ${firstType}\ntext: ${text}`);
 }
 
 function start() {
@@ -124,10 +115,6 @@ function restartBtnFunction() {
     start();
     document.getElementById("wordsInput").focus();
 }
-
-// function endRestartBtn() {
-//     setup();
-// }
 
 function end() {
     words.style.filter = "none";
