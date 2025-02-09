@@ -24,6 +24,8 @@ h1 {
     border-radius: 5px;
     padding: 0.25em;
 
+    color: white;
+
     position: absolute;
     top: 25%;
     left: 50%;
@@ -94,8 +96,5 @@ h1 {
 
 #wordsInput {
     position: relative;
-    /* display: flex;
-    align-items: center;
-    align-content: center;
-    flex-direction: row; */
+    color: white;
 }
